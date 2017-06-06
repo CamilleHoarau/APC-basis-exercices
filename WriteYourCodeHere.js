@@ -1,5 +1,14 @@
 // Defined variables :
 // playerX
 // playerY
+// stageWidth
+// stageHeight
 
-// WRITE YOUR CODE HERE
+
+function gameLoop(){
+    
+    // WRITE YOUR CODE HERE
+    
+}
+
+window.setInterval(gameLoop, 1000/60);
