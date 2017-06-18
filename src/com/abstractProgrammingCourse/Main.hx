@@ -77,6 +77,14 @@ class Main
             set : function(y) { graph.y = y; }
         });
         
+        untyped Object.defineProperty(window, 'playerWidth', {
+            get : function() { return graph.width; }
+        });
+        
+        untyped Object.defineProperty(window, 'playerHeight', {
+            get : function() { return graph.height; }
+        });
+        
 		Browser.window.requestAnimationFrame(cast gameLoop);		
 	}
 	
