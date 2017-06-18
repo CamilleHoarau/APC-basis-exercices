@@ -1,6 +1,8 @@
 // Defined variables :
 // playerX
 // playerY
+// playerWidth
+// playerHeight
 // stageWidth
 // stageHeight
 
