@@ -1,16 +1,11 @@
 // Defined variables :
-// playerX
-// playerY
-// playerWidth
-// playerHeight
 // stageWidth
 // stageHeight
 
+// Defined Constant :
+// PI
 
-function gameLoop(){
-    
-    // WRITE YOUR CODE HERE
-    
-}
-
-window.setInterval(gameLoop, 1000/60);
+// Defined Functions :
+// createSquareAt(x, y)
+// cos(radian)
+// sin(radian)

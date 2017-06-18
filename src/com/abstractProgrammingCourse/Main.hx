@@ -51,14 +51,6 @@ class Main
 		
 		stage = new Container();
 		
-        var graph:Graphics = new Graphics();
-        graph.beginFill(0xFF0000);
-        graph.drawRect( -25, -25, 50, 50);
-        graph.endFill();
-        stage.addChild(graph);
-        graph.x = WIDTH / 2;
-        graph.y = HEIGHT / 2;
-        
         untyped Object.defineProperty(window, 'stageWidth', { 
             get: function() { return WIDTH; }, 
         });
@@ -67,26 +59,37 @@ class Main
             get: function() { return HEIGHT; }, 
         });
         
-        untyped Object.defineProperty(window, 'playerX', { 
-            get: function() { return graph.x; }, 
-            set : function(x) { graph.x = x; }
+        untyped Object.defineProperty(window, 'cos', {
+            get : function() { return Math.cos; }
         });
         
-        untyped Object.defineProperty(window, 'playerY', { 
-            get: function() { return graph.y; }, 
-            set : function(y) { graph.y = y; }
+        untyped Object.defineProperty(window, 'sin', {
+            get : function() { return Math.sin; }
         });
         
-        untyped Object.defineProperty(window, 'playerWidth', {
-            get : function() { return graph.width; }
+        untyped Object.defineProperty(window, 'PI', {
+            get : function() { return Math.PI; }
         });
         
-        untyped Object.defineProperty(window, 'playerHeight', {
-            get : function() { return graph.height; }
+        untyped Object.defineProperty(window, 'createSquareAt', {
+            get : function() { return createSquareAt; }
         });
         
 		Browser.window.requestAnimationFrame(cast gameLoop);		
 	}
+    
+    private function createSquareAt(x:Float, y:Float):Graphics 
+    {
+        var graph:Graphics = new Graphics();
+        graph.beginFill(0xFF0000);
+        graph.drawRect( -25, -25, 50, 50);
+        graph.endFill();
+        stage.addChild(graph);
+        graph.x = x;
+        graph.y = y;
+        
+        return graph;
+    }
 	
 	/**
 	 * game loop
