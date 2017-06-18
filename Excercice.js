@@ -27,6 +27,12 @@ var com_abstractProgrammingCourse_Main = function() {
 	}, set : function(y) {
 		graph.y = y;
 	}});
+	Object.defineProperty(window,"playerWidth",{ get : function() {
+		return graph.width;
+	}});
+	Object.defineProperty(window,"playerHeight",{ get : function() {
+		return graph.height;
+	}});
 	window.requestAnimationFrame($bind(this,this.gameLoop));
 };
 com_abstractProgrammingCourse_Main.main = function() {
